@@ -1,0 +1,33 @@
+﻿<Window x:Class="ex01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ex01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnActualizar" Content="Actualitzar" HorizontalAlignment="Left" Margin="463,69,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="btnActualizar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="568,20,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="btnEliminar_Click"/>
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="678,20,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="btnEditar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="568,69,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="btnCancelar_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="678,364,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="btnExit_Click"/>
+        <Button x:Name="btnNou" Content="Nou" HorizontalAlignment="Left" Margin="462,20,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="btnNou_Click"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="515,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="20"/>
+        <TextBox x:Name="txtNom" HorizontalAlignment="Left" Margin="515,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="20"/>
+        <TextBox x:Name="txtPreu" HorizontalAlignment="Left" Margin="515,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="20"/>
+        <TextBox x:Name="txtQuantitat" HorizontalAlignment="Left" Margin="515,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="20"/>
+        <TextBox x:Name="txtCategoria" HorizontalAlignment="Left" Margin="515,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="20"/>
+        <Label x:Name="lbl_Id" Content="ID" HorizontalAlignment="Left" Margin="431,133,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNom" Content="Nom" HorizontalAlignment="Left" Margin="431,175,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPreu" Content="Preu Unitari" HorizontalAlignment="Left" Margin="431,222,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblQuantitat" Content="Quantitat " HorizontalAlignment="Left" Margin="431,269,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCategoria" Content="Categoria" HorizontalAlignment="Left" Margin="431,320,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dgvProductes" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="28,27,387,27"/>
+
+    </Grid>
+</Window>

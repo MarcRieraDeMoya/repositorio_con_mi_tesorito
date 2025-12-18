@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfEquips.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestió d'Equips" Height="500" Width="800">
+    <Grid Margin="10">
+        <!-- Panell principal -->
+        <StackPanel x:Name="panelPrincipal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Seleccioneu una font de dades" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" />
+            <Button x:Name="btnMySQL" Content="Carregar MySQL" Width="150" Margin="5" Click="BtnMySQL_Click" />
+            <Button x:Name="btnXML" Content="Carregar XML" Width="150" Margin="5" Click="BtnXML_Click" />
+            <Button x:Name="btnCSV" Content="Carregar CSV" Width="150" Margin="5" Click="BtnCSV_Click" />
+        </StackPanel>
+
+        <!-- Panell de funcionalitats -->
+        <StackPanel x:Name="panelFuncionalitats" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="titolFuncionalitats" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" />
+
+            <!-- Formulari -->
+            <StackPanel x:Name="formulari" Visibility="Collapsed" Margin="0,0,0,20">
+                <TextBlock x:Name="lblAbreviatura" Visibility="Collapsed" Text="Abreviatura:" />
+                <TextBox x:Name="txtAbreviatura" Visibility="Collapsed" />
+                <TextBlock x:Name="lblNom" Visibility="Collapsed" Text="Nom:" />
+                <TextBox x:Name="txtNom" Visibility="Collapsed" />
+                <TextBlock x:Name="lblPressupost" Visibility="Collapsed" Text="Pressupost:" />
+                <TextBox x:Name="txtPressupost" Visibility="Collapsed" />
+                <TextBlock x:Name="lblLogo" Visibility="Collapsed" Text="Logo:" />
+                <TextBox x:Name="txtLogo" Visibility="Collapsed" />
+            </StackPanel>
+
+            <!-- Botó Siguiente per actualització -->
+            <Button x:Name="btnSeguentActualitzar" Content="Següent" Width="150" Margin="5"
+                    Visibility="Collapsed" Click="BtnSeguentActualitzar_Click" />
+
+            <!-- Botons de funcionalitats -->
+            <Button x:Name="btnAfegir" Content="Afegir" Width="150" Margin="5" Click="BtnAfegir_Click" />
+            <Button x:Name="btnEliminar" Content="Eliminar" Width="150" Margin="5" Click="BtnEliminar_Click" />
+            <Button x:Name="btnMostrarTot" Content="Mostrar Tot" Width="150" Margin="5" Click="BtnMostrarTot_Click" />
+            <Button x:Name="btnActualitzar" Content="Actualitzar" Width="150" Margin="5" Click="BtnActualitzar_Click" />
+            <Button x:Name="btnCercarEquip" Content="Cercar Equip" Width="150" Margin="5" Click="BtnCercarEquip_Click" />
+            <Button x:Name="btnTornarFuncionalitats" Content="Tornar al menú principal" Width="200" Margin="10" Click="BtnTornarFuncionalitats_Click" />
+        </StackPanel>
+
+        <!-- Panell de dades -->
+        <Grid x:Name="panelDades" Visibility="Collapsed">
+            <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" IsReadOnly="True" Margin="0,0,0,50" />
+            <Button x:Name="btnTornarDades" Content="Tornar al menú principal" Width="200" Height="30"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="BtnTornarDades_Click" />
+        </Grid>
+    </Grid>
+</Window>
